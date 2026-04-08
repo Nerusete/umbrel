@@ -3,7 +3,7 @@ id: jadelamo-viniplay
 name: ViniPlay
 tagline: A powerful IPTV player
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-viniplay/logo.png
-category: files & productivity
+category: TV / IPTV
 version: "0.10.1"
 port: 8998
 description: >-
