@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    image: getumbrel/app-proxy:v0.2.0
+    restart: on-failure
+    environment:
+      - APP_HOST=jadelamo-nodecast-tv_web_1
+      - APP_PORT=8080
+
+  web:
+    image: komet/nodecast-tv:latest
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
