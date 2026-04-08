@@ -5,7 +5,7 @@ services:
     image: getumbrel/app-proxy:v0.2.0
     restart: on-failure
     environment:
-      - APP_HOST=nodecast-tv_web_1
+      - APP_HOST=jadelamo-nodecast-tv_web_1
       - APP_PORT=8080
 
   web:
