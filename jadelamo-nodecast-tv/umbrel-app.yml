@@ -1,0 +1,14 @@
+id: nodecast-tv
+name: NodeCast TV
+version: "1.0.0"
+description: >-
+  Un reproductor de IPTV minimalista, rápido y moderno basado en web. 
+  Permite cargar tus listas M3U y disfrutar de televisión en vivo 
+  directamente desde tu navegador sin configuraciones pesadas.
+developer: Komet
+website: https://github.com/komet/nodecast-tv
+submitter: TuNombre
+category: Media
+port: 8080
+default_storage_limit: 1GB
+description_hex: 4e6f64654361737420545620657320756e20726570726f647563746f72206c696765726f207061726120747573206c697374617320495054562e
