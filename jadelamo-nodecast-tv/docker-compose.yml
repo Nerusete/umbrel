@@ -1,19 +1,12 @@
-version: "3.7"
-
 services:
-  app_proxy:
-    image: getumbrel/app-proxy:v0.2.0
-    restart: on-failure
-    environment:
-      - APP_HOST=jadelamo-nodecast-tv_web_1
-      - APP_PORT=8080
-
-  web:
-    image: hermsi/nodecast-tv:latest
-    user: "1000:1000"
-    restart: on-failure
+  nodecast-tv:
+    build: https://github.com/technomancer702/nodecast-tv.git#main
+    container_name: jadelamo-nodecast-tv
+    ports:
+      - "3000:3000" # Host:Container
     volumes:
-      - ${APP_DATA_DIR}/data:/app/data
+      - ./data:/app/data
+    restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - PORT=8080
+      - PORT=3000 # Optional: Internal container port
