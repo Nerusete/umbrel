@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  server:
+    image: xhofuz/alist:latest
+    container_name: jadelamo-alist
+    volumes:
+      - ${APP_DATA_DIR}/data:/opt/alist/data
+    ports:
+      - 5244:5244
+    restart: always
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
