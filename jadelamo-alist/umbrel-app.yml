@@ -1,0 +1,14 @@
+{
+  "id": "alist",
+  "name": "jadelamo-Alist",
+  "version": "latest",
+  "description": "Un gestor de archivos que unifica todas tus nubes (Drive, OneDrive, Dropbox, etc) en un solo lugar.",
+  "developer": "Alist",
+  "website": "https://alist.nn.ci",
+  "repo": "https://github.com/alist-org/alist",
+  "support": "https://github.com/alist-org/alist/issues",
+  "port": 5244,
+  "gallery": [],
+  "path": "",
+  "defaultPassword": ""
+}
