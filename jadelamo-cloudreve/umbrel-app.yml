@@ -1,6 +1,6 @@
 manifestVersion: 1
 
-id: cloudreve
+id: jadelamo-cloudreve
 name: Cloudreve
 tagline: Self-hosted cloud storage
 icon: ./assets/icon.png
