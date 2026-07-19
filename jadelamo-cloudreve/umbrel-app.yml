@@ -1,0 +1,31 @@
+manifestVersion: 1
+
+id: cloudreve
+name: Cloudreve
+tagline: Self-hosted cloud storage
+icon: ./assets/icon.png
+category: files
+version: "4.18.0"
+port: 5212
+
+description: >-
+  Cloudreve is a self-hosted cloud storage and file sharing platform.
+
+developer: Cloudreve
+website: https://cloudreve.org
+submitter: TuNombre
+submission: https://github.com/tuusuario/umbrel-cloudreve
+repo: https://github.com/cloudreve/Cloudreve
+support: https://github.com/cloudreve/Cloudreve/issues
+
+gallery:
+  - ./assets/gallery-1.png
+
+releaseNotes: >-
+  Initial release.
+
+dependencies: []
+
+path: ""
+defaultUsername: admin
+defaultPassword: "Create on first login"
