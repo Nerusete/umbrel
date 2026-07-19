@@ -1,12 +1,15 @@
 services:
-  nodecast-tv:
-    build: https://github.com/technomancer702/nodecast-tv.git#main
-    container_name: jadelamo-nodecast-tv
-    ports:
-      - "3000:3000" # Host:Container
-    volumes:
-      - ./data:/app/data
+  cloudreve:
+    image: cloudreve/cloudreve:latest
+    container_name: cloudreve
     restart: unless-stopped
+
+    ports:
+      - "5212:5212"
+
+    volumes:
+      - ./data:/cloudreve/data
+
     environment:
-      - NODE_ENV=production
-      - PORT=3000 # Optional: Internal container port
+      TZ: Europe/Madrid
+      CR_CONF_Database.Type: sqlite
