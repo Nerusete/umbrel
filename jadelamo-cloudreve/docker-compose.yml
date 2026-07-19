@@ -1,1 +1,10 @@
+version: "3.7"
 
+services:
+  app:
+    image: cloudreve/cloudreve:latest
+    restart: unless-stopped
+    ports:
+      - "5212:5212"
+    volumes:
+      - ${APP_DATA_DIR}/data:/cloudreve/data
