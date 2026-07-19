@@ -1,10 +1,15 @@
-version: "3.7"
-
 services:
-  app:
+  cloudreve:
     image: cloudreve/cloudreve:latest
+    container_name: cloudreve
     restart: unless-stopped
+
     ports:
       - "5212:5212"
+
     volumes:
-      - ${APP_DATA_DIR}/data:/cloudreve/data
+      - ./data:/cloudreve/data
+
+    environment:
+      TZ: Europe/Madrid
+      CR_CONF_Database.Type: sqlite
