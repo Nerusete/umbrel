@@ -3,7 +3,7 @@ version: '3.7'
 services:
   app_proxy:
     environment:
-      APP_HOST: jadelamo-cloudreve_web_1
+      APP_HOST: jadelamo-cloudreve2_web_1
       APP_PORT: 5212
 
   web:
