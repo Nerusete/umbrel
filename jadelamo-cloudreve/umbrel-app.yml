@@ -3,7 +3,7 @@ manifestVersion: 1
 id: jadelamo-cloudreve
 name: Cloudreve
 tagline: Self-hosted cloud storage
-icon: ./assets/icon.png
+icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-cloudreve/logo.png
 category: files
 version: "4.18.0"
 port: 5212
