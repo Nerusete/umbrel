@@ -5,7 +5,7 @@ name: FileBrowser Quantum
 tagline: Gestor de archivos web moderno
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-filebrowser-quantum/icon.svg
 category: utilities
-version: "1.0.0"
+version: "1.5.0"
 port: 8085
 
 description: >-
@@ -22,7 +22,7 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Primera versión para la tienda JADELAMO.
+  Actualizado a FileBrowser Quantum v1.5.0 stable.
 
 dependencies: []
 path: ""
