@@ -13,4 +13,5 @@ services:
 
     volumes:
       - ./data:/home/filebrowser/data
+      - ./config.yaml:/home/filebrowser/data/config.yaml:ro
       - ./files:/srv
