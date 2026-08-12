@@ -1,0 +1,27 @@
+manifestVersion: 1
+
+id: jadelamo-sun-panel
+name: Sun-Panel
+tagline: Panel web personal para gestionar tus accesos y servicios
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-sun-panel/icon.svg
+category: utilities
+version: "1.0.0"
+port: 3002
+
+description: >-
+  Sun-Panel es un panel web personal ligero y moderno para organizar accesos
+  a tus aplicaciones, servicios y recursos desde una única interfaz.
+
+developer: hslr-s
+website: https://github.com/hslr-s/sun-panel
+repo: https://github.com/hslr-s/sun-panel
+support: https://github.com/hslr-s/sun-panel/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO.
+
+dependencies: []
+path: ""
