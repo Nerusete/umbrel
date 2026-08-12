@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-xampp_web_1
+      APP_PORT: 80
+
+  web:
+    image: xampp/app:8.4
+    restart: unless-stopped
+    stop_grace_period: 1m
+    volumes:
+      - ${APP_DATA_DIR}/www:/app
+    environment:
+      TZ: Europe/Madrid
+      DOCKER_XAMPP_BIN_ENV: dev
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    stop_grace_period: 1m
+    environment:
+      TZ: Europe/Madrid
+      MARIADB_ROOT_PASSWORD: ${APP_SEED}
+      MARIADB_DATABASE: xampp
+      MARIADB_USER: xampp
+      MARIADB_PASSWORD: ${APP_SEED}
+    volumes:
+      - ${APP_DATA_DIR}/mariadb:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 256M
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
