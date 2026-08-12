@@ -1,15 +1,15 @@
 services:
-  cloudreve:
-    image: cloudreve/cloudreve:latest
-    container_name: cloudreve
+  nodecast-tv:
+    image: ghcr.io/technomancer702/nodecast-tv:latest
+    container_name: jadelamo-nodecast-tv
     restart: unless-stopped
 
     ports:
-      - "5212:5212"
+      - "3000:3000"
 
     volumes:
-      - ./data:/cloudreve/data
+      - ./data:/app/data
 
     environment:
-      TZ: Europe/Madrid
-      CR_CONF_Database.Type: sqlite
+      NODE_ENV: production
+      PORT: 3000
