@@ -1,14 +1,27 @@
+manifestVersion: 1
+
 id: jadelamo-nodecast-tv
 name: NodeCast TV
-version: "1.0.0"
+tagline: Reproductor IPTV web para listas M3U
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-nodecast-tv/icon.svg
+category: media
+version: "1.0.1"
+port: 3000
+
 description: >-
-  Un reproductor de IPTV minimalista, rápido y moderno basado en web. 
-  Permite cargar tus listas M3U y disfrutar de televisión en vivo 
-  directamente desde tu navegador sin configuraciones pesadas.
+  Reproductor IPTV ligero y moderno basado en web. Permite cargar listas M3U
+  y reproducir canales de televisión en directo desde el navegador.
+
 developer: Komet
-website: https://github.com/komet/nodecast-tv
-submitter: TuNombre
-category: Media
-port: 8080
-default_storage_limit: 1GB
-description_hex: 4e6f64654361737420545620657320756e20726570726f647563746f72206c696765726f207061726120747573206c697374617320495054562e
+website: https://github.com/technomancer702/nodecast-tv
+repo: https://github.com/technomancer702/nodecast-tv
+support: https://github.com/technomancer702/nodecast-tv/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+releaseNotes: >-
+  Corrección de la configuración Docker, puerto y almacenamiento persistente.
+
+dependencies: []
+path: ""
