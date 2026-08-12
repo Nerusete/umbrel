@@ -1,0 +1,28 @@
+manifestVersion: 1
+
+id: jadelamo-filebrowser-quantum
+name: FileBrowser Quantum
+tagline: Gestor de archivos web moderno
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-filebrowser-quantum/icon.svg
+category: utilities
+version: "1.0.0"
+port: 8085
+
+description: >-
+  Gestor de archivos web moderno y potente para administrar tus archivos
+  desde el navegador, con búsqueda, previsualización, edición, subida,
+  descarga, compartición y gestión de usuarios.
+
+developer: FileBrowser Quantum
+website: https://filebrowserquantum.com/
+repo: https://github.com/gtsteffaniak/filebrowser
+support: https://github.com/gtsteffaniak/filebrowser/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO.
+
+dependencies: []
+path: ""
