@@ -1,0 +1,16 @@
+services:
+  sun-panel:
+    image: hslr/sun-panel:latest
+    container_name: jadelamo-sun-panel
+    restart: unless-stopped
+
+    ports:
+      - "3002:3002"
+
+    volumes:
+      - ./conf:/app/conf
+      - ./uploads:/app/uploads
+      - ./database:/app/database
+
+    environment:
+      TZ: Europe/Madrid
