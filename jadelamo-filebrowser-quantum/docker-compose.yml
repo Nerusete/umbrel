@@ -8,12 +8,10 @@ services:
       - "8085:80"
 
     environment:
-      FILEBROWSER_CONFIG: /home/filebrowser/config.yaml
+      FILEBROWSER_CONFIG: /home/filebrowser/data/config.yaml
       TZ: Europe/Madrid
 
     volumes:
-      - ${UMBREL_ROOT}/:/storage
-      - ${UMBREL_ROOT}/external/2T:/external
-      - ${UMBREL_ROOT}/external/1TB:/external1
-      - ${APP_DATA_DIR}/data/database:/home/filebrowser/database
-      - ${APP_DATA_DIR}/data/config/config.yaml:/home/filebrowser/config.yaml
+      - ./data:/home/filebrowser/data
+      - ./config.yaml:/home/filebrowser/data/config.yaml:ro
+      - ./files:/srv
