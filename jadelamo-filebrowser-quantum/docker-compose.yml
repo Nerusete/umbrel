@@ -1,6 +1,6 @@
 services:
   filebrowser-quantum:
-    image: gtstef/filebrowser:latest
+    image: gtstef/filebrowser:1.5.0-stable
     container_name: jadelamo-filebrowser-quantum
     restart: unless-stopped
 
