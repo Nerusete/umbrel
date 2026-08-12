@@ -1,6 +1,6 @@
 services:
   sun-panel:
-    image: hslr/sun-panel:latest
+    image: hslr/sun-panel:1.8.1
     container_name: jadelamo-sun-panel
     restart: unless-stopped
 
