@@ -5,7 +5,7 @@ name: Sun-Panel
 tagline: Panel web personal para gestionar tus accesos y servicios
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-sun-panel/icon.svg
 category: utilities
-version: "1.0.0"
+version: "1.8.1"
 port: 3002
 
 description: >-
@@ -21,7 +21,8 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Primera versión para la tienda JADELAMO.
+  Actualizado a Sun-Panel v1.8.1. Incluye mejoras en las tarjetas de proyectos,
+  gestión Docker, rendimiento y correcciones de OpenAPI.
 
 dependencies: []
 path: ""
