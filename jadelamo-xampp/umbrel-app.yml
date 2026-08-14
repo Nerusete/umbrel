@@ -4,14 +4,12 @@ name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
 icon: https://www.apachefriends.org/images/xampp-logo-ac950edf.svg
 category: development
-version: "1.0.0"
-port: 8080
+version: "1.0.1"
+port: 80
 
 description: >-
-  XAMPP-style development environment for umbrelOS. Includes Apache and PHP
-  through the XAMPP Docker image, a persistent MariaDB database, and
-  phpMyAdmin for database administration. Put your PHP projects in the
-  persistent www folder and open the app from Umbrel.
+  XAMPP development environment for umbrelOS using Apache, MariaDB, PHP and
+  phpMyAdmin. Web projects are stored persistently in Umbrel's htdocs folder.
 
 developer: Apache Friends / XAMPP
 website: https://www.apachefriends.org/
@@ -21,7 +19,9 @@ submitter: Nerusete
 submission: https://github.com/Nerusete/umbrel
 
 gallery: []
-releaseNotes: "Initial release for the JADELAMO Umbrel App Store."
+releaseNotes: >-
+  Updated to the tomsik68 XAMPP image with Umbrel app proxy integration and
+  persistent htdocs storage.
 dependencies: []
 path: ""
 defaultUsername: ""
