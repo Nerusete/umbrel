@@ -1,31 +1,26 @@
 manifestVersion: 1
 id: jadelamo-xampp
 name: XAMPP
-tagline: Apache + MySQL + PHP development stack for Umbrel
-icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/640px-XAMPP_logo.svg.png
+tagline: Apache + MariaDB + PHP + phpMyAdmin
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
 category: development
 version: "1.0.2"
 port: 41062
 
 description: >-
-  Run a full Apache, PHP, and MySQL development stack directly on your Umbrel.
-  Includes Apache, PHP and MySQL in one XAMPP container. Web projects are
-  stored persistently in Umbrel's htdocs folder.
+  XAMPP development environment for umbrelOS using Apache, MariaDB, PHP and
+  phpMyAdmin. Web projects are stored persistently in Umbrel's htdocs folder.
 
-developer: tomsik68
-website: https://hub.docker.com/r/tomsik68/xampp/
+developer: Apache Friends / XAMPP
+website: https://www.apachefriends.org/
 repo: https://github.com/Nerusete/umbrel
-support: https://github.com/Nerusete/umbrel/issues
+support: https://community.apachefriends.org/
 submitter: Nerusete
 submission: https://github.com/Nerusete/umbrel
 
-gallery:
-  - https://i.imgur.com/DrqnJ5J.png
-  - https://i.imgur.com/CG6JHzQ.png
-
+gallery: []
 releaseNotes: >-
-  Updated the XAMPP package to follow the Umbrel App Proxy pattern used by
-  the JADELAMO App Store, with persistent htdocs storage.
+  Updated XAMPP with Umbrel app proxy integration and persistent htdocs storage.
 
 dependencies: []
 path: ""
