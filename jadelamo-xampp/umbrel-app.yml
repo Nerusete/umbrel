@@ -2,9 +2,9 @@ manifestVersion: 1
 id: jadelamo-xampp
 name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
-icon: https://www.apachefriends.org/images/xampp-logo.svg
+icon: ./icon.svg
 category: development
-version: "1.0.3"
+version: "1.0.4"
 port: 41062
 
 description: >-
@@ -21,8 +21,8 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Nueva versión de XAMPP para la tienda JADELAMO con almacenamiento persistente
-  de htdocs, MariaDB y configuración.
+  Añade un icono local para garantizar que XAMPP se muestre correctamente
+  en la tienda JADELAMO.
 
 dependencies: []
 path: ""
