@@ -4,9 +4,9 @@ id: jadelamo-audiobookshelf
 name: Audiobookshelf
 tagline: Servidor de audiolibros y podcasts
 author: Audiobookshelf
-icon: https://raw.githubusercontent.com/advplyr/audiobookshelf/master/client/public/Logo.svg
+icon: ./icon.svg
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 13378
 
 description: >-
@@ -19,8 +19,8 @@ repo: https://github.com/advplyr/audiobookshelf
 support: https://github.com/advplyr/audiobookshelf/issues
 
 releaseNotes: >-
-  Primera versión para la tienda JADELAMO. Utiliza la imagen Docker oficial
-  de Audiobookshelf y permite acceder al contenido del disco externo 2TB.
+  Añade un icono local para garantizar que la aplicación se muestre correctamente
+  en la tienda JADELAMO.
 
 dependencies: []
 
