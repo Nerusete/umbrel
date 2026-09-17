@@ -8,8 +8,10 @@ services:
       PROXY_AUTH_ADD: "false"
 
   app:
-    image: tomsik68/xampp:8
-    restart: on-failure
+    image: tomsik68/xampp:8.2.12
+    restart: unless-stopped
     init: true
     volumes:
       - ${UMBREL_ROOT}/data/storage/htdocs:/opt/lampp/htdocs:rw
+      - ${UMBREL_ROOT}/data/storage/xampp-mysql:/opt/lampp/var/mysql:rw
+      - ${UMBREL_ROOT}/data/storage/xampp-config:/opt/lampp/etc:rw
