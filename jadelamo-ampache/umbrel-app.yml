@@ -1,0 +1,28 @@
+manifestVersion: 1
+
+id: jadelamo-ampache
+name: Ampache
+tagline: Servidor de música y streaming
+icon: https://raw.githubusercontent.com/ampache/ampache/develop/public/favicon.svg
+category: music
+version: "1.0.0"
+port: 8086
+
+description: >-
+  Ampache es un servidor de música autoalojado para organizar, gestionar y
+  reproducir tu colección musical desde la red local o de forma remota.
+
+developer: Ampache
+website: https://ampache.org
+repo: https://github.com/ampache/ampache
+support: https://github.com/ampache/ampache/issues
+
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO. Utiliza la imagen Docker oficial
+  de Ampache y monta la biblioteca musical del disco externo 2TB en /media.
+
+dependencies: []
+
+path: ""
+defaultUsername: admin
+defaultPassword: "Crear durante la instalación"
