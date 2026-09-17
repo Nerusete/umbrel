@@ -1,0 +1,29 @@
+manifestVersion: 1
+
+id: jadelamo-audiobookshelf
+name: Audiobookshelf
+tagline: Servidor de audiolibros y podcasts
+author: Audiobookshelf
+icon: https://raw.githubusercontent.com/advplyr/audiobookshelf/master/client/public/Logo.svg
+category: media
+version: "1.0.0"
+port: 13378
+
+description: >-
+  Audiobookshelf es un servidor autoalojado para organizar y reproducir
+  audiolibros, podcasts y libros electrónicos desde la red local o de forma remota.
+
+developer: Audiobookshelf
+website: https://www.audiobookshelf.org
+repo: https://github.com/advplyr/audiobookshelf
+support: https://github.com/advplyr/audiobookshelf/issues
+
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO. Utiliza la imagen Docker oficial
+  de Audiobookshelf y permite acceder al contenido del disco externo 2TB.
+
+dependencies: []
+
+path: ""
+defaultUsername: "Crear durante la instalación"
+defaultPassword: "Crear durante la instalación"
