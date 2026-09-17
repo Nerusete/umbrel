@@ -2,9 +2,9 @@ manifestVersion: 1
 id: jadelamo-xampp
 name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
-icon: ./icon.svg
-category: development
-version: "1.0.4"
+icon: icon.svg
+category: developer
+version: "1.0.5"
 port: 41062
 
 description: >-
@@ -21,8 +21,7 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Añade un icono local para garantizar que XAMPP se muestre correctamente
-  en la tienda JADELAMO.
+  Corrige la referencia al icono local y la categoría de la aplicación.
 
 dependencies: []
 path: ""
