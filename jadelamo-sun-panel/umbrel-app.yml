@@ -3,14 +3,14 @@ manifestVersion: 1
 id: jadelamo-sun-panel
 name: Sun-Panel
 tagline: Panel web personal para gestionar tus accesos y servicios
-icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-sun-panel/icon.svg
+icon: ./icon.svg
 category: utilities
-version: "1.8.1"
+version: "2.0.2-beta260912"
 port: 3002
 
 description: >-
   Sun-Panel es un panel web personal ligero y moderno para organizar accesos
-  a tus aplicaciones, servicios y recursos desde una única interfaz.
+  a aplicaciones, servicios y recursos desde una única interfaz.
 
 developer: hslr-s
 website: https://github.com/hslr-s/sun-panel
@@ -21,8 +21,8 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Actualizado a Sun-Panel v1.8.1. Incluye mejoras en las tarjetas de proyectos,
-  gestión Docker, rendimiento y correcciones de OpenAPI.
+  Actualizado a Sun-Panel 2.0.2-beta260912, la versión beta más reciente
+  disponible en Docker Hub.
 
 dependencies: []
 path: ""
