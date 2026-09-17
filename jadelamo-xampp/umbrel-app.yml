@@ -2,14 +2,15 @@ manifestVersion: 1
 id: jadelamo-xampp
 name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
-icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
+icon: https://www.apachefriends.org/images/xampp-logo.svg
 category: development
-version: "1.0.2"
+version: "1.0.3"
 port: 41062
 
 description: >-
-  XAMPP development environment for umbrelOS using Apache, MariaDB, PHP and
-  phpMyAdmin. Web projects are stored persistently in Umbrel's htdocs folder.
+  Entorno de desarrollo XAMPP para umbrelOS con Apache, MariaDB, PHP y
+  phpMyAdmin. Incluye almacenamiento persistente para tus proyectos web,
+  bases de datos y configuración.
 
 developer: Apache Friends / XAMPP
 website: https://www.apachefriends.org/
@@ -20,9 +21,10 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Updated XAMPP with Umbrel app proxy integration and persistent htdocs storage.
+  Nueva versión de XAMPP para la tienda JADELAMO con almacenamiento persistente
+  de htdocs, MariaDB y configuración.
 
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: root
+defaultPassword: root
