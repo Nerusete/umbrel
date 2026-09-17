@@ -1,0 +1,20 @@
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    container_name: jadelamo-audiobookshelf
+    restart: unless-stopped
+
+    ports:
+      - "13378:80"
+
+    environment:
+      TZ: Europe/Madrid
+
+    volumes:
+      # Contenido del disco externo 2TB
+      # En Audiobookshelf podrás crear las bibliotecas apuntando a /media
+      - ${UMBREL_ROOT}/external/2T/Contenidos:/media:ro
+
+      # Configuración y base de datos persistentes
+      - ./data/config:/config
+      - ./data/metadata:/metadata
