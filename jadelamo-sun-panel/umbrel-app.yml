@@ -21,8 +21,7 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Actualizado a Sun-Panel 2.0.2-beta260912, la versión beta más reciente
-  disponible en Docker Hub.
+  Usa la etiqueta beta más reciente de Sun-Panel (2.0.2-beta260912).
 
 dependencies: []
 path: ""
