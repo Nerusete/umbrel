@@ -1,0 +1,21 @@
+services:
+  ampache:
+    image: ampache/ampache:7
+    container_name: jadelamo-ampache
+    restart: unless-stopped
+
+    ports:
+      - "8086:80"
+
+    environment:
+      TZ: Europe/Madrid
+      DISABLE_INOTIFYWAIT_CLEAN: "1"
+
+    volumes:
+      # Biblioteca musical del disco externo 2TB
+      - ${UMBREL_ROOT}/external/2T/Contenidos/Musica:/media:ro
+
+      # Configuración y base de datos persistentes
+      - ./data/config:/var/www/config
+      - ./data/mysql:/var/lib/mysql
+      - ./data/log:/var/log/ampache
