@@ -4,9 +4,9 @@ id: jadelamo-audiobookshelf
 name: Audiobookshelf
 tagline: Servidor de audiolibros y podcasts
 author: Audiobookshelf
-icon: ./icon.svg
+icon: icon.svg
 category: media
-version: "1.0.1"
+version: "1.0.2"
 port: 13378
 
 description: >-
@@ -19,8 +19,7 @@ repo: https://github.com/advplyr/audiobookshelf
 support: https://github.com/advplyr/audiobookshelf/issues
 
 releaseNotes: >-
-  Añade un icono local para garantizar que la aplicación se muestre correctamente
-  en la tienda JADELAMO.
+  Corrige la referencia al icono local de la aplicación.
 
 dependencies: []
 
