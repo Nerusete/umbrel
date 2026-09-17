@@ -1,6 +1,6 @@
 services:
   sun-panel:
-    image: hslr/sun-panel:1.8.1
+    image: hslr/sun-panel:2.0.2-beta260912
     container_name: jadelamo-sun-panel
     restart: unless-stopped
 
@@ -9,8 +9,7 @@ services:
 
     volumes:
       - ./conf:/app/conf
-      - ./uploads:/app/uploads
-      - ./database:/app/database
+      - /var/run/docker.sock:/var/run/docker.sock
 
     environment:
       TZ: Europe/Madrid
