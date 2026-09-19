@@ -1,6 +1,7 @@
 version: "3.7"
 
 services:
+
   app_proxy:
     environment:
       APP_HOST: jadelamo-xampp_app_1
@@ -8,8 +9,8 @@ services:
       PROXY_AUTH_ADD: "false"
 
   app:
-    image: tomsik68/xampp:8
+    image: tomsik68/xampp
     restart: on-failure
-    stop_grace_period: 1m
+    init: true
     volumes:
-      - ${APP_DATA_DIR}/data/htdocs:/www
+      - ${UMBREL_ROOT}/data/storage/htdocs:/opt/lampp/htdocs:rw
