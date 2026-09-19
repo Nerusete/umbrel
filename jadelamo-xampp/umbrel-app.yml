@@ -2,9 +2,9 @@ manifestVersion: 1
 id: jadelamo-xampp
 name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
-icon: icon.svg
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
 category: developer
-version: "1.0.5"
+version: "1.0.6"
 port: 41062
 
 description: >-
