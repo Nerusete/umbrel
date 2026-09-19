@@ -12,5 +12,4 @@ services:
     restart: unless-stopped
     init: true
     volumes:
-      - ${UMBREL_ROOT}/data/storage/htdocs:/opt/lampp/htdocs:rw
-      - ${UMBREL_ROOT}/data/storage/xampp-mysql:/opt/lampp/var/mysql:rw
+      - ./htdocs:/opt/lampp/htdocs:rw
