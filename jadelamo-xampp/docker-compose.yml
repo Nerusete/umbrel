@@ -9,4 +9,4 @@ services:
       - "41062:80"
 
     volumes:
-      - ${UMBREL_ROOT}/data/storage/htdocs:/opt/lampp/htdocs:rw
+      - /home/umbrel/umbrel/data/storage/htdocs:/opt/lampp/htdocs:rw
