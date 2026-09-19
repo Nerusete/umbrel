@@ -4,9 +4,9 @@ id: jadelamo-audiobookshelf
 name: Audiobookshelf
 tagline: Servidor de audiolibros y podcasts
 author: Audiobookshelf
-icon: icon.svg
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-audiobookshelf/icon.svg
 category: media
-version: "1.0.2"
+version: "1.0.3"
 port: 13378
 
 description: >-
