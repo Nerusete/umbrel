@@ -4,7 +4,7 @@ name: XAMPP
 tagline: Apache + MariaDB + PHP + phpMyAdmin
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
 category: developer
-version: "1.0.6"
+version: "1.0.7"
 port: 41062
 
 description: >-
@@ -21,7 +21,7 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Corrige la referencia al icono local y la categoría de la aplicación.
+  Corrige el arranque de XAMPP eliminando el montaje de una carpeta vacía sobre la base de datos interna de MariaDB.
 
 dependencies: []
 path: ""
