@@ -1,14 +1,16 @@
-version: "3.2"
+version: "3.7"
 
 services:
   sun-panel:
     image: hslr/sun-panel:beta
     container_name: jadelamo-sun-panel
-    restart: always
+    restart: on-failure
 
     volumes:
-      - ./conf:/app/conf
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data/conf:/app/conf
+      - ${APP_DATA_DIR}/data/uploads:/app/uploads
+      - ${APP_DATA_DIR}/data/database:/app/database
+      - /var/run/docker.sock:/var/run/docker.sock 
 
     ports:
       - "3002:3002"
