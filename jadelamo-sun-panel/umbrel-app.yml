@@ -1,12 +1,12 @@
 manifestVersion: 1
 
 id: jadelamo-sun-panel
-name: Sun-Panel
+name: Sun Panel
 tagline: Panel web personal para gestionar tus accesos y servicios
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-sun-panel/icon.svg
 category: utilities
 version: "2.0.3"
-port: 3002
+port: 3911
 
 description: >-
   Sun-Panel es un panel web personal ligero y moderno para organizar accesos
@@ -19,9 +19,16 @@ support: https://github.com/hslr-s/sun-panel/issues
 submitter: Nerusete
 submission: https://github.com/Nerusete/umbrel
 
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-sun-panel/1.jpg
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-sun-panel/2.jpg
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-sun-panel/3.jpg
+  - https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-sun-panel/4.jpg
+  
 releaseNotes: >-
   Usa la etiqueta beta más reciente de Sun-Panel (2.0.2-beta260912).
 
 dependencies: []
 path: ""
+defaultUsername: "admin@sun.cc"
+defaultPassword: "12345678"
