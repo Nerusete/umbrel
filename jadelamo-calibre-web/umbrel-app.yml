@@ -1,0 +1,36 @@
+manifestVersion: 1
+
+id: jadelamo-calibre-web
+name: Calibre-Web
+tagline: Biblioteca web para libros electrónicos
+icon: https://raw.githubusercontent.com/janeczku/calibre-web/master/cps/static/css/images/favicon.ico
+category: reading
+version: "1.0.0"
+port: 8083
+
+description: >-
+  Calibre-Web es una interfaz web para gestionar, organizar y leer
+  una biblioteca de libros electrónicos. Permite usuarios múltiples,
+  lectura desde el navegador, OPDS, descarga de libros y gestión
+  de metadatos.
+
+developer: Calibre-Web
+website: https://github.com/janeczku/calibre-web
+repo: https://github.com/janeczku/calibre-web
+support: https://github.com/janeczku/calibre-web/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de Calibre-Web para la tienda JADELAMO.
+  Utiliza la imagen LinuxServer.io y mantiene la configuración
+  de Calibre-Web en el almacenamiento de la aplicación.
+  La biblioteca se monta desde el disco externo 2TB.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
