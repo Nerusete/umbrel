@@ -1,0 +1,37 @@
+manifestVersion: 1
+
+id: jadelamo-komga
+name: Komga
+tagline: Servidor de cómics, manga, revistas y libros digitales
+icon: https://raw.githubusercontent.com/gotson/komga/master/komga/src/main/resources/static/favicon.svg
+category: reading
+version: "1.0.0"
+port: 25600
+
+description: >-
+  Komga es un servidor multimedia para organizar, gestionar y leer
+  cómics, manga, novelas gráficas, revistas y otros libros digitales.
+  Incluye interfaz web, OPDS, sincronización de lectura y soporte
+  para múltiples bibliotecas y usuarios.
+
+developer: Gotson
+website: https://komga.org/
+repo: https://github.com/gotson/komga
+support: https://github.com/gotson/komga/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+repo: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de Komga para la tienda JADELAMO.
+  Utiliza la imagen oficial de Komga, conserva su configuración
+  en el almacenamiento de la aplicación y permite seleccionar
+  las bibliotecas desde la carpeta Contenidos del disco externo 2TB.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
