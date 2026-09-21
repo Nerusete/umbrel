@@ -1,0 +1,34 @@
+manifestVersion: 1
+
+id: jadelamo-metube
+name: MeTube
+tagline: Descarga vídeos y audio con yt-dlp
+icon: https://raw.githubusercontent.com/alexta69/metube/master/ui/src/assets/favicon.svg
+category: utilities
+version: "1.0.0"
+port: 8081
+
+description: >-
+  MeTube es una interfaz web para yt-dlp que permite descargar vídeos,
+  audio, subtítulos y miniaturas desde YouTube y muchos otros sitios.
+  También admite listas de reproducción y suscripciones.
+
+developer: Alex Shnitman
+website: https://github.com/alexta69/metube
+repo: https://github.com/alexta69/metube
+support: https://github.com/alexta69/metube/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de MeTube para la tienda JADELAMO.
+  Utiliza la imagen oficial multi-arquitectura de MeTube y guarda
+  las descargas en el almacenamiento de Umbrel.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
