@@ -1,6 +1,9 @@
 services:
+
   xampp:
-    image: tomsik68/xampp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: jadelamo-xampp
     restart: unless-stopped
     init: true
@@ -8,5 +11,55 @@ services:
     ports:
       - "41062:80"
 
+    environment:
+      TZ: Europe/Madrid
+
     volumes:
-      - /home/umbrel/umbrel/data/storage/htdocs:/opt/lampp/htdocs:rw
+      - /home/umbrel/umbrel/data/storage/htdocs:/var/www/html:rw
+
+    depends_on:
+      mariadb:
+        condition: service_healthy
+
+  mariadb:
+    image: mariadb:11.4
+    container_name: jadelamo-xampp-mariadb
+    restart: unless-stopped
+
+    environment:
+      TZ: Europe/Madrid
+      MARIADB_ROOT_PASSWORD: 12345678
+      MARIADB_DATABASE: xampp
+
+    volumes:
+      - ${APP_DATA_DIR}/data/mariadb:/var/lib/mysql
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "healthcheck.sh",
+          "--connect",
+          "--innodb_initialized"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: jadelamo-xampp-phpmyadmin
+    restart: unless-stopped
+
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 0
+      UPLOAD_LIMIT: 256M
+
+    ports:
+      - "41063:80"
+
+    depends_on:
+      mariadb:
+        condition: service_healthy
