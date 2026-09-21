@@ -1,0 +1,23 @@
+services:
+  metube:
+    image: ghcr.io/alexta69/metube:latest
+    container_name: jadelamo-metube
+    restart: unless-stopped
+
+    ports:
+      - "8081:8081"
+
+    environment:
+      TZ: Europe/Madrid
+      PUID: "1000"
+      PGID: "1000"
+      UMASK: "022"
+      DEFAULT_THEME: auto
+      DOWNLOAD_DIR: /downloads
+
+    volumes:
+      # Descargas en el almacenamiento de Umbrel
+      - /home/umbrel/umbrel/data/storage/downloads:/downloads
+
+      # Configuración y estado persistente
+      - ${APP_DATA_DIR}/data/config:/config
