@@ -3,7 +3,7 @@ manifestVersion: 1
 id: jadelamo-komga
 name: Komga
 tagline: Servidor de cómics, manga, revistas y libros digitales
-icon: https://raw.githubusercontent.com/gotson/komga/master/komga/src/main/resources/static/favicon.svg
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-komga/icon.svg
 category: reading
 version: "1.0.0"
 port: 25600
