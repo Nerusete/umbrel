@@ -1,0 +1,21 @@
+services:
+  calibre-web:
+    image: lscr.io/linuxserver/calibre-web:latest
+    container_name: jadelamo-calibre-web
+    restart: unless-stopped
+
+    ports:
+      - "8083:8083"
+
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: Europe/Madrid
+
+    volumes:
+      # Configuración y base de datos de Calibre-Web
+      - ${APP_DATA_DIR}/data/config:/config
+
+      # Biblioteca de libros del disco externo 2TB
+      # Selecciona dentro de Calibre-Web la carpeta que contiene metadata.db
+      - ${UMBREL_ROOT}/external/2T/Contenidos:/books:rw
