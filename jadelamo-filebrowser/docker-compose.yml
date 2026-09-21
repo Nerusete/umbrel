@@ -1,0 +1,19 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: jadelamo-filebrowser
+    restart: unless-stopped
+
+    ports:
+      - "8084:80"
+
+    environment:
+      TZ: Europe/Madrid
+
+    volumes:
+      # Toda la carpeta de almacenamiento de Umbrel
+      - /home/umbrel/umbrel/data/storage:/srv:rw
+
+      # Base de datos y configuración de File Browser
+      - ${APP_DATA_DIR}/data:/database
+      - ${APP_DATA_DIR}/config:/config
