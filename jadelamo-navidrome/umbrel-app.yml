@@ -1,0 +1,36 @@
+manifestVersion: 1
+
+id: jadelamo-navidrome
+name: Navidrome
+tagline: Servidor de música moderno y ligero
+icon: https://raw.githubusercontent.com/navidrome/navidrome/master/resources/logo.svg
+category: music
+version: "1.0.0"
+port: 4533
+
+description: >-
+  Navidrome es un servidor de música autoalojado, moderno y ligero.
+  Permite organizar, gestionar y reproducir tu colección musical
+  desde el navegador y mediante clientes compatibles con Subsonic y
+  OpenSubsonic.
+
+developer: Navidrome
+website: https://www.navidrome.org/
+repo: https://github.com/navidrome/navidrome
+support: https://github.com/navidrome/navidrome/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+repo: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de Navidrome para la tienda JADELAMO.
+  Utiliza la imagen Docker oficial de Navidrome y monta la biblioteca
+  musical del disco externo 2TB en modo lectura.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
