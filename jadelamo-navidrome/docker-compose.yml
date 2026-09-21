@@ -1,0 +1,21 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: jadelamo-navidrome
+    restart: unless-stopped
+
+    ports:
+      - "4533:4533"
+
+    environment:
+      TZ: Europe/Madrid
+      ND_LOGLEVEL: info
+      ND_SCANSCHEDULE: 1h
+      ND_SESSIONTIMEOUT: 24h
+
+    volumes:
+      # Biblioteca musical del disco externo 2TB
+      - ${UMBREL_ROOT}/external/2T/Contenidos/Musica:/music:ro
+
+      # Configuración, base de datos y estado de Navidrome
+      - ${APP_DATA_DIR}/data:/data
