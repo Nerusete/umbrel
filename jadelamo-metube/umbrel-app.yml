@@ -3,7 +3,7 @@ manifestVersion: 1
 id: jadelamo-metube
 name: MeTube
 tagline: Descarga vídeos y audio con yt-dlp
-icon: https://raw.githubusercontent.com/alexta69/metube/master/ui/src/assets/favicon.svg
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-metube/icon.svg
 category: utilities
 version: "1.0.0"
 port: 8081
