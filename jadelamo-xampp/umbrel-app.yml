@@ -1,21 +1,24 @@
 manifestVersion: 1
+
 id: jadelamo-xampp
 name: XAMPP
-tagline: Run a full Apache + MySQL + PHP stack directly on your Umbrel
+tagline: Apache, PHP 8.3, MariaDB and phpMyAdmin
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
 category: developer
-version: "1.1.0"
+version: "2.0.0"
 port: 41062
 
 description: >-
-  Run a full Apache, PHP, and MySQL development stack directly on your Umbrel.
+  Complete PHP development environment with Apache, PHP 8.3,
+  MariaDB and phpMyAdmin.
 
-  - Includes Apache, PHP, and MySQL in one container
-  - Ideal for testing and developing PHP-based web applications
-  - Websites stored in '/umbrel/data/storage/htdocs'
+  Includes PHP extensions for MySQL, GD, ZIP, mbstring, Intl,
+  EXIF and OPcache.
 
-developer: tomsik68
-website: https://hub.docker.com/r/tomsik68/xampp/
+  Websites are stored in the Umbrel storage htdocs folder.
+
+developer: Nerusete
+website: https://www.apachefriends.org/
 submitter: Nerusete
 submission: https://github.com/Nerusete/umbrel
 repo: https://github.com/Nerusete/umbrel
@@ -24,10 +27,12 @@ support: https://github.com/Nerusete/umbrel/issues
 gallery: []
 
 releaseNotes: >-
-  Corrige la categoría del manifiesto y adapta XAMPP al formato de
-  configuración de umbrelOS 2.0.
+  New XAMPP implementation for umbrelOS 2.0.
+  Replaces the old tomsik68/xampp image with a custom
+  PHP 8.3 Apache image and MariaDB.
+  Supports AMD64 and ARM64.
 
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "root"
+defaultPassword: "12345678"
