@@ -3,7 +3,7 @@ manifestVersion: 1
 id: jadelamo-calibre-web
 name: Calibre-Web
 tagline: Biblioteca web para libros electrónicos
-icon: https://raw.githubusercontent.com/janeczku/calibre-web/master/cps/static/css/images/favicon.ico
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-calibre-web/icon.svg
 category: reading
 version: "1.0.0"
 port: 8083
