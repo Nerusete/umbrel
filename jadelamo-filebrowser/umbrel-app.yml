@@ -1,0 +1,33 @@
+manifestVersion: 1
+
+id: jadelamo-filebrowser
+name: File Browser
+tagline: Gestor de archivos web para Umbrel
+icon: https://raw.githubusercontent.com/filebrowser/filebrowser/master/frontend/public/img/icons/favicon-32x32.png
+category: utilities
+version: "1.0.0"
+port: 8084
+
+description: >-
+  File Browser es un gestor de archivos web ligero que permite navegar,
+  subir, descargar, copiar, mover, renombrar y eliminar archivos
+  directamente desde el navegador.
+
+developer: File Browser
+website: https://filebrowser.org/
+repo: https://github.com/filebrowser/filebrowser
+support: https://github.com/filebrowser/filebrowser/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de File Browser para la tienda JADELAMO.
+  Permite administrar el almacenamiento de Umbrel desde una interfaz web.
+
+dependencies: []
+
+path: ""
+defaultUsername: "admin"
+defaultPassword: ""
