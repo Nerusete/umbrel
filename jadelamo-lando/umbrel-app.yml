@@ -5,7 +5,7 @@ name: Lando
 tagline: Entorno de desarrollo local basado en Docker
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-lando/icon.svg
 category: developer
-version: "1.0.1"
+version: "1.0.2"
 port: 7681
 
 description: >-
@@ -26,10 +26,9 @@ submission: https://github.com/Nerusete/umbrel
 gallery: []
 
 releaseNotes: >-
-  Primera versión para umbrelOS 2.0.
+  Corrección de instalación para umbrelOS 2.0.
+  La imagen se publica en GHCR y se descarga directamente, sin build local.
   Incluye Lando CLI, Docker CLI, Docker Compose y terminal web.
-  Los proyectos se guardan en la carpeta lando-projects del almacenamiento
-  de Umbrel y pueden crear sus propios contenedores Docker.
 
 dependencies: []
 path: ""
