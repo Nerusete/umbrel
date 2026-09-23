@@ -5,7 +5,7 @@ name: Devilbox
 tagline: Entorno de desarrollo PHP, Apache/Nginx y bases de datos
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-devilbox/icon.svg
 category: developer
-version: "1.0.2"
+version: "1.0.3"
 port: 8090
 
 description: >-
@@ -24,6 +24,7 @@ gallery: []
 
 releaseNotes: >-
   Cambio de puertos para evitar conflictos con otras aplicaciones de Umbrel.
+  Corregida la compatibilidad PHP-FPM y la ruta del documento web.
 
 dependencies: []
 
