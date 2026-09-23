@@ -5,8 +5,8 @@ name: Devilbox
 tagline: Entorno de desarrollo PHP, Apache/Nginx y bases de datos
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-devilbox/icon.svg
 category: developer
-version: "1.0.1"
-port: 8085
+version: "1.0.2"
+port: 8090
 
 description: >-
   Devilbox es un entorno de desarrollo PHP dockerizado que permite
@@ -23,8 +23,7 @@ submission: https://github.com/Nerusete/umbrel
 gallery: []
 
 releaseNotes: >-
-  Primera versión de Devilbox para la tienda JADELAMO.
-  Corregida para utilizar las imágenes Docker oficiales de Devilbox.
+  Cambio de puertos para evitar conflictos con otras aplicaciones de Umbrel.
 
 dependencies: []
 
