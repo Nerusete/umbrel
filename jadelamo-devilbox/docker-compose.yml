@@ -1,18 +1,76 @@
 services:
-  devilbox:
-    image: cytopia/devilbox:latest
-    container_name: jadelamo-devilbox
+  php:
+    image: devilbox/php-fpm-8.3:latest
+    container_name: jadelamo-devilbox-php
+    restart: unless-stopped
+
+    environment:
+      TIMEZONE: Europe/Madrid
+      NEW_UID: "1000"
+      NEW_GID: "1000"
+      DOCKER_LOGS: "1"
+
+    volumes:
+      - ${APP_DATA_DIR}/data/www:/shared/httpd:rw
+
+  httpd:
+    image: devilbox/apache-2.4:latest
+    container_name: jadelamo-devilbox-httpd
     restart: unless-stopped
 
     ports:
       - "8085:80"
+      - "8445:443"
 
     environment:
-      TZ: Europe/Madrid
-      DEVILBOX_UI_SSL_TYPE: none
+      TIMEZONE: Europe/Madrid
+      NEW_UID: "1000"
+      NEW_GID: "1000"
+      DOCKER_LOGS: "1"
+      MAIN_VHOST_ENABLE: "1"
+      MAIN_VHOST_STATUS_ENABLE: "1"
+      MAIN_VHOST_SSL_TYPE: "none"
+      MASS_VHOST_ENABLE: "1"
+      MASS_VHOST_TLD: ".loc"
+      MASS_VHOST_DOCROOT: htdocs
+      PHP_FPM_ENABLE: "1"
+      PHP_FPM_SERVER_ADDR: php
+      PHP_FPM_SERVER_PORT: "9000"
+      PHP_FPM_TIMEOUT: "180"
 
     volumes:
       - ${APP_DATA_DIR}/data/www:/shared/httpd:rw
-      - ${APP_DATA_DIR}/data/.devilbox:/shared/httpd/.devilbox:rw
-      - ${APP_DATA_DIR}/data/cfg:/etc/devilbox:rw
+      - ${APP_DATA_DIR}/data/www/default:/var/www/default/htdocs:rw
 
+    depends_on:
+      - php
+
+  mariadb:
+    image: devilbox/mysql:mariadb-10.10
+    container_name: jadelamo-devilbox-mariadb
+    restart: unless-stopped
+
+    environment:
+      MYSQL_ROOT_PASSWORD: "12345678"
+      MYSQL_DATABASE: devilbox
+      TZ: Europe/Madrid
+
+    volumes:
+      - ${APP_DATA_DIR}/data/mariadb:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: jadelamo-devilbox-phpmyadmin
+    restart: unless-stopped
+
+    ports:
+      - "8086:80"
+
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: "3306"
+      PMA_ARBITRARY: "0"
+      UPLOAD_LIMIT: 256M
+
+    depends_on:
+      - mariadb
