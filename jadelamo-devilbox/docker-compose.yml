@@ -1,6 +1,6 @@
 services:
   php:
-    image: devilbox/php-fpm-8.3:latest
+    image: devilbox/php-fpm-8.2:latest
     container_name: jadelamo-devilbox-php
     restart: unless-stopped
 
@@ -11,7 +11,7 @@ services:
       DOCKER_LOGS: "1"
 
     volumes:
-      - ${APP_DATA_DIR}/data/www:/shared/httpd:rw
+      - ${APP_DATA_DIR}/data/www:/var/www/default/htdocs:rw
 
   httpd:
     image: devilbox/apache-2.4:latest
@@ -27,20 +27,18 @@ services:
       NEW_UID: "1000"
       NEW_GID: "1000"
       DOCKER_LOGS: "1"
+      COMPAT: "8.2"
       MAIN_VHOST_ENABLE: "1"
       MAIN_VHOST_STATUS_ENABLE: "1"
       MAIN_VHOST_SSL_TYPE: "none"
-      MASS_VHOST_ENABLE: "1"
-      MASS_VHOST_TLD: ".loc"
-      MASS_VHOST_DOCROOT: htdocs
+      MAIN_VHOST_DOCROOT: htdocs
       PHP_FPM_ENABLE: "1"
       PHP_FPM_SERVER_ADDR: php
       PHP_FPM_SERVER_PORT: "9000"
       PHP_FPM_TIMEOUT: "180"
 
     volumes:
-      - ${APP_DATA_DIR}/data/www:/shared/httpd:rw
-      - ${APP_DATA_DIR}/data/www/default:/var/www/default/htdocs:rw
+      - ${APP_DATA_DIR}/data/www:/var/www/default/htdocs:rw
 
     depends_on:
       - php
