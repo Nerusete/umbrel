@@ -1,0 +1,33 @@
+manifestVersion: 1
+
+id: jadelamo-devilbox
+name: Devilbox
+tagline: Entorno de desarrollo PHP, Apache/Nginx y bases de datos
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-devilbox/icon.svg
+category: developer
+version: "1.0.0"
+port: 8085
+
+description: >-
+  Devilbox es un entorno de desarrollo PHP dockerizado que permite
+  trabajar con múltiples versiones de PHP, servidores web y bases de datos.
+  Está pensado para desarrollar y probar proyectos web localmente.
+
+developer: Ctopia
+website: https://devilbox.org/
+repo: https://github.com/cytopia/devilbox
+support: https://github.com/cytopia/devilbox/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de Devilbox para la tienda JADELAMO.
+  Adaptada para ejecutarse como aplicación Docker en umbrelOS 2.0.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
