@@ -1,15 +1,13 @@
 services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-lando_lando_1
+      APP_PORT: 7681
+
   lando:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: nerusete-lando
+    image: ghcr.io/nerusete/jadelamo-lando:1.0.2
     restart: unless-stopped
     init: true
-    privileged: false
-
-    ports:
-      - "7681:7681"
 
     environment:
       TZ: Europe/Madrid
