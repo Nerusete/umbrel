@@ -1,0 +1,18 @@
+services:
+  devilbox:
+    image: cytopia/devilbox:latest
+    container_name: jadelamo-devilbox
+    restart: unless-stopped
+
+    ports:
+      - "8085:80"
+
+    environment:
+      TZ: Europe/Madrid
+      DEVILBOX_UI_SSL_TYPE: none
+
+    volumes:
+      - ${APP_DATA_DIR}/data/www:/shared/httpd:rw
+      - ${APP_DATA_DIR}/data/.devilbox:/shared/httpd/.devilbox:rw
+      - ${APP_DATA_DIR}/data/cfg:/etc/devilbox:rw
+
