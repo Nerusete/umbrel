@@ -1,5 +1,7 @@
 FROM ubuntu:24.04
 
+ARG TARGETARCH
+
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Madrid
 ENV LANDO_HOME=/root/.lando
@@ -11,8 +13,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     docker.io \
     docker-compose-v2 \
-    nodejs \
-    npm \
     ttyd \
     bash \
     openssh-client \
@@ -28,17 +28,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     dnsutils \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://get.lando.dev/setup-lando.sh -o /tmp/setup-lando.sh \
-    && chmod +x /tmp/setup-lando.sh \
-    && /tmp/setup-lando.sh --version stable --no-setup --yes \
-    && rm -f /tmp/setup-lando.sh
+RUN set -eux; \
+    case "${TARGETARCH}" in \
+      amd64) LANDO_ARCH="x64" ;; \
+      arm64) LANDO_ARCH="arm64" ;; \
+      *) echo "Unsupported architecture: ${TARGETARCH}" && exit 1 ;; \
+    esac; \
+    curl -fsSL "https://github.com/lando/core/releases/download/v3.26.9/lando-linux-${LANDO_ARCH}-v3.26.9" -o /usr/local/bin/lando; \
+    chmod +x /usr/local/bin/lando; \
+    lando version
 
-RUN mkdir -p /home/umbrel/umbrel/data/storage/lando-projects /root/.lando \
+RUN mkdir -p /home/umbrel/umbrel/data/storage/lando-projects /root/.lando /root/.lando/cache \
     && printf "proxy: 'OFF'\nbindAddress: '0.0.0.0'\nproxyBindAddress: '0.0.0.0'\n" > /root/.lando/config.yml \
-    && echo false > /root/.lando/cache_report_errors 2>/dev/null || true
+    && echo false > /root/.lando/cache/report_errors
 
 WORKDIR /home/umbrel/umbrel/data/storage/lando-projects
 
 EXPOSE 7681
 
-CMD ["ttyd", "--writable", "--port", "7681", "bash", "-lc", "echo 'Lando para Umbrel GO'; echo 'Proyectos: /home/umbrel/umbrel/data/storage/lando-projects'; echo; lando version; echo; exec bash"]
+CMD ["ttyd", "--writable", "--port", "7681", "bash", "-lc", "echo '========================================'; echo ' LANDO PARA UMBREL GO'; echo '========================================'; echo; echo 'Proyectos: /home/umbrel/umbrel/data/storage/lando-projects'; echo; lando version; echo; echo 'Docker:'; docker version --format '{{.Server.Version}}' 2>/dev/null || true; echo; exec bash"]
