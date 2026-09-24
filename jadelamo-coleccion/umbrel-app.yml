@@ -5,7 +5,7 @@ name: Mi Colección
 tagline: Colección personal de monedas y billetes
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-coleccion/icon.svg
 category: utilities
-version: "1.0.1"
+version: "1.0.2"
 port: 41100
 description: >-
   Aplicación personal para catalogar monedas y billetes con fotografías,
