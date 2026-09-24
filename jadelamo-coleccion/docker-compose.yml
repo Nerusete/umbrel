@@ -1,11 +1,12 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: jadelamo-coleccion_coleccion_1
+      APP_HOST: jadelamo-coleccion
       APP_PORT: 41100
 
   coleccion:
-    image: ghcr.io/nerusete/jadelamo-coleccion:1.0.1
+    image: ghcr.io/nerusete/jadelamo-coleccion:1.0.2
+    container_name: jadelamo-coleccion
     restart: unless-stopped
     init: true
     environment:
