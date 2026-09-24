@@ -30,7 +30,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/nerusete/jadelamo-coleccion:1.0.1
+            ghcr.io/nerusete/jadelamo-coleccion:1.0.2
             ghcr.io/nerusete/jadelamo-coleccion:latest
       - name: Make GHCR package public
         env:
