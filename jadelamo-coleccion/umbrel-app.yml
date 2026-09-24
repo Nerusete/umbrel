@@ -2,30 +2,23 @@ manifestVersion: 1
 
 id: jadelamo-coleccion
 name: Mi Colección
-tagline: Catálogo personal de monedas y billetes
+tagline: Colección personal de monedas y billetes
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-coleccion/icon.svg
 category: utilities
-version: "1.0.0"
+version: "1.0.1"
 port: 41100
-
 description: >-
-  Aplicación personal para catalogar monedas y billetes.
-  Permite añadir fotografías de anverso y reverso, país, valor,
-  año, ceca, conservación, precios, cantidad y notas.
-  Incluye buscador, filtros y estadísticas de la colección.
-
+  Aplicación personal para catalogar monedas y billetes con fotografías,
+  búsqueda, filtros y estadísticas.
 developer: Nerusete
 website: https://github.com/Nerusete/umbrel
 repo: https://github.com/Nerusete/umbrel
 support: https://github.com/Nerusete/umbrel/issues
 submitter: Nerusete
 submission: https://github.com/Nerusete/umbrel
-
 gallery: []
-
 releaseNotes: >-
-  Primera versión. Catálogo de monedas y billetes con fotos,
-  búsqueda, filtros y estadísticas.
-
+  Corrección de instalación para umbrelOS 2.0.
+  Imagen Docker publicada en GHCR para AMD64 y ARM64.
 dependencies: []
 path: ""
