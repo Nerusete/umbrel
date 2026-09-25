@@ -1,14 +1,17 @@
+version: "3.7"
+
 services:
+
   app_proxy:
     environment:
-      APP_HOST: jadelamo-coleccion
+      APP_HOST: jadelamo-coleccion_coleccion_1
       APP_PORT: 41100
 
   coleccion:
     image: ghcr.io/nerusete/jadelamo-coleccion:1.0.2
-    container_name: jadelamo-coleccion
-    restart: unless-stopped
+    restart: on-failure
     init: true
+    stop_grace_period: 1m
     environment:
       TZ: Europe/Madrid
     volumes:
