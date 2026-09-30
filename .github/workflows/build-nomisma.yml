@@ -1,0 +1,61 @@
+name: Build Nomisma images
+
+on:
+  push:
+    paths:
+      - "jadelamo-nomisma/**"
+      - ".github/workflows/build-nomisma.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout JADELAMO store
+        uses: actions/checkout@v4
+
+      - name: Checkout Nomisma source
+        uses: actions/checkout@v4
+        with:
+          repository: nikolareljin/nomisma
+          path: nomisma-source
+          ref: main
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push backend
+        uses: docker/build-push-action@v6
+        with:
+          context: nomisma-source/backend
+          file: nomisma-source/backend/Dockerfile
+          push: true
+          platforms: linux/amd64
+          tags: ghcr.io/nerusete/jadelamo-nomisma-backend:latest
+
+      - name: Prepare frontend for Umbrel proxy
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("nomisma-source/frontend/src/api.js")
+          s = p.read_text()
+          s = s.replace("import.meta.env.VITE_API_URL || 'http://localhost:8000'", "import.meta.env.VITE_API_URL || ''")
+          p.write_text(s)
+          PY
+
+      - name: Build and push frontend
+        uses: docker/build-push-action@v6
+        with:
+          context: nomisma-source/frontend
+          file: nomisma-source/frontend/Dockerfile
+          push: true
+          platforms: linux/amd64
+          tags: ghcr.io/nerusete/jadelamo-nomisma-frontend:latest
