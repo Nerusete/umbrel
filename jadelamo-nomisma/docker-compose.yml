@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-nomisma_frontend_1
+      APP_PORT: 80
+
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nomisma
+      POSTGRES_PASSWORD: ${NOMISMA_DB_PASSWORD:-change-this-password}
+      POSTGRES_DB: nomisma
+    volumes:
+      - ${APP_DATA_DIR}/postgres:/var/lib/postgresql/data
+
+  backend:
+    image: ghcr.io/nerusete/jadelamo-nomisma-backend:latest
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://nomisma:${NOMISMA_DB_PASSWORD:-change-this-password}@db:5432/nomisma
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+      SECRET_KEY: ${SECRET_KEY:-jadelamo-nomisma-change-this-secret}
+      FRONTEND_URL: http://frontend
+    volumes:
+      - ${APP_DATA_DIR}/images:/app/images
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: ghcr.io/nerusete/jadelamo-nomisma-frontend:latest
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:15-alpine
