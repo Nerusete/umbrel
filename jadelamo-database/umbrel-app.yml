@@ -1,0 +1,35 @@
+manifestVersion: 1
+
+id: jadelamo-database
+name: JADELAMO Database
+tagline: Base de datos visual tipo Tadabase
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-database/icon.svg
+category: developer
+version: "1.0.0"
+port: 8088
+
+description: >-
+  Plataforma visual de bases de datos autoalojada, inspirada en
+  herramientas no-code como Tadabase. Permite crear tablas,
+  relaciones, formularios, vistas, filtros y búsquedas desde el navegador.
+  Incluye PostgreSQL para almacenar los datos.
+
+developer: JADELAMO
+website: https://nocodb.com/
+repo: https://github.com/nocodb/nocodb
+support: https://github.com/nocodb/nocodb/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de JADELAMO Database.
+  Basada en NocoDB y PostgreSQL para ofrecer una plataforma
+  de bases de datos visual y autoalojada en Umbrel.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
