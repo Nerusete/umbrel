@@ -1,0 +1,25 @@
+manifestVersion: 1
+
+id: jadelamo-aurearia
+name: Aurearia
+tagline: Colección numismática con IA
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-aurearia/icon.svg
+category: utilities
+version: "1.0.0"
+port: 41101
+description: >-
+  Aplicación web autoalojada para catalogar y organizar colecciones
+  de monedas, con fotografías, referencias, estadísticas y herramientas
+  de análisis mediante IA.
+developer: briandenicola
+website: https://github.com/briandenicola/Aurearia
+repo: https://github.com/briandenicola/Aurearia
+support: https://github.com/briandenicola/Aurearia/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+gallery: []
+releaseNotes: >-
+  Primera versión adaptada para la tienda JADELAMO.
+  Utiliza las imágenes Docker publicadas por el proyecto.
+dependencies: []
+path: ""
