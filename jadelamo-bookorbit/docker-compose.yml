@@ -1,0 +1,58 @@
+services:
+  bookorbit:
+    image: ghcr.io/bookorbit/bookorbit:3.1.0
+    container_name: jadelamo-bookorbit
+    restart: unless-stopped
+    init: true
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: bookorbit
+      POSTGRES_PASSWORD: "83b1c4ee2f0ea654795c3f1707c14da79e3fdbafd7b38237"
+      POSTGRES_DB: bookorbit
+      JWT_SECRET: "9662e575b5af2f5777edb6e37ef129944df021f656aa14f8d21308bb876d24b1"
+      SETUP_BOOTSTRAP_TOKEN: "78ce3bca59d9c89ebb00c36b0a43dd0f"
+      APP_URL: http://192.168.1.162:3000
+      CLIENT_URL: http://192.168.1.162:3000
+      TZ: Europe/Madrid
+      PUID: "1000"
+      PGID: "1000"
+
+    volumes:
+      - ${UMBREL_ROOT}/external/2T/Contenidos:/books:rw
+      - ${APP_DATA_DIR}/data/app:/data
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: pgvector/pgvector:pg18
+    container_name: jadelamo-bookorbit-db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: bookorbit
+      POSTGRES_PASSWORD: "83b1c4ee2f0ea654795c3f1707c14da79e3fdbafd7b38237"
+      POSTGRES_DB: bookorbit
+      PGDATA: /var/lib/postgresql/data/pgdata
+
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U bookorbit -d bookorbit"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
