@@ -1,0 +1,35 @@
+manifestVersion: 1
+
+id: jadelamo-bookorbit
+name: BookOrbit
+tagline: Biblioteca y lector digital autoalojado
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-bookorbit/icon.svg
+category: reading
+version: "1.0.0"
+port: 3000
+
+description: >-
+  BookOrbit es una plataforma autoalojada para organizar y leer
+  libros electrónicos, PDF, audiolibros y cómics. Incluye lectores
+  web, sincronización de progreso, OPDS y soporte para múltiples
+  usuarios.
+
+developer: BookOrbit
+website: https://bookorbit.app/
+repo: https://github.com/bookorbit/bookorbit
+support: https://github.com/bookorbit/bookorbit/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
+
+releaseNotes: >-
+  Primera versión de BookOrbit para la tienda JADELAMO.
+  Basada en BookOrbit 3.1.0 y PostgreSQL con pgvector.
+  La biblioteca utiliza la carpeta Contenidos del disco externo 2TB.
+
+dependencies: []
+
+path: ""
+defaultUsername: ""
+defaultPassword: ""
