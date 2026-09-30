@@ -1,0 +1,24 @@
+manifestVersion: 1
+
+id: jadelamo-opennumismatweb
+name: OpenNumismat Web
+tagline: Consulta tu colección numismática desde el navegador
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-opennumismatweb/icon.svg
+category: utilities
+version: "1.0.0"
+port: 41102
+description: >-
+  Aplicación web oficial de OpenNumismat para consultar colecciones
+  desde el navegador y dispositivos móviles.
+developer: OpenNumismat
+website: https://opennumismat.github.io/
+repo: https://github.com/OpenNumismat/OpenNumismatWeb
+support: https://github.com/OpenNumismat/OpenNumismatWeb/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+gallery: []
+releaseNotes: >-
+  Primera versión adaptada para la tienda JADELAMO.
+  Incluye la imagen Docker oficial de OpenNumismat Web.
+dependencies: []
+path: ""
