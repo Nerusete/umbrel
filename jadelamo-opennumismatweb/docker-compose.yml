@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-opennumismatweb_opennumismatweb_1
+      APP_PORT: 8000
+
+  opennumismatweb:
+    image: ghcr.io/opennumismat/opennumismatweb:latest
+    restart: unless-stopped
+    environment:
+      API_KEY: ${API_KEY:-}
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data:ro
