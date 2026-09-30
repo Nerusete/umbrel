@@ -1,0 +1,25 @@
+manifestVersion: 1
+
+id: jadelamo-nomisma
+name: Nomisma
+tagline: Catalogación de monedas con identificación mediante IA
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-nomisma/icon.svg
+category: utilities
+version: "1.0.0"
+port: 41103
+description: >-
+  Sistema de catalogación numismática con identificación y análisis
+  mediante IA, fotografías, búsqueda avanzada y gestión de inventario.
+developer: nikolareljin
+website: https://github.com/nikolareljin/nomisma
+repo: https://github.com/nikolareljin/nomisma
+support: https://github.com/nikolareljin/nomisma/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+gallery: []
+releaseNotes: >-
+  Primera versión adaptada para la tienda JADELAMO.
+  Las imágenes Docker se construyen automáticamente mediante GitHub Actions
+  a partir del proyecto original.
+dependencies: []
+path: ""
