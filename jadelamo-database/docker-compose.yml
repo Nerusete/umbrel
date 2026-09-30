@@ -1,0 +1,28 @@
+services:
+  database:
+    image: postgres:16
+    container_name: jadelamo-database-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nocodb
+      POSTGRES_USER: nocodb
+      POSTGRES_PASSWORD: "12345678"
+      TZ: Europe/Madrid
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+
+  nocodb:
+    image: nocodb/nocodb:latest
+    container_name: jadelamo-database
+    restart: unless-stopped
+    ports:
+      - "8088:8080"
+    environment:
+      NC_DB: "pg://database:5432?u=nocodb&p=12345678&d=nocodb"
+      NC_PUBLIC_URL: "http://192.168.1.162:8088"
+      NC_DISABLE_TELE: "true"
+      TZ: Europe/Madrid
+    volumes:
+      - ${APP_DATA_DIR}/data/nocodb:/usr/app/data
+    depends_on:
+      - database
