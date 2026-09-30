@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-aurearia_app_1
+      APP_PORT: 8080
+
+  app:
+    image: briandenicola/ancient-coins:latest
+    restart: unless-stopped
+    environment:
+      JWT_SECRET: ${JWT_SECRET:-jadelamo-aurearia-change-this-secret}
+      DB_PATH: /app/data/ancientcoins.db
+      PORT: "8080"
+      AGENT_SERVICE_URL: http://agent:8081
+      AGENT_INTERNAL_SERVICE_TOKEN: ${AGENT_INTERNAL_SERVICE_TOKEN:-jadelamo-aurearia-agent-token}
+      AGENT_INTERNAL_CALLBACK_URL: http://app:8080
+      AUCTION_CREDENTIAL_ENCRYPTION_KEY: ${AUCTION_CREDENTIAL_ENCRYPTION_KEY:-}
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+      - ${APP_DATA_DIR}/uploads:/app/uploads
+    depends_on:
+      agent:
+        condition: service_healthy
+
+  agent:
+    image: briandenicola/ancient-coins-agent:latest
+    restart: unless-stopped
+    environment:
+      AGENT_INTERNAL_SERVICE_TOKEN: ${AGENT_INTERNAL_SERVICE_TOKEN:-jadelamo-aurearia-agent-token}
+      AGENT_TRUSTED_OUTBOUND_ORIGINS: http://app:8080
+      AGENT_ALLOW_LOCAL_OUTBOUND: "false"
+    expose:
+      - "8081"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8081/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
