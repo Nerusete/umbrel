@@ -13,4 +13,4 @@ services:
     restart: on-failure
     init: true
     volumes:
-      - ${UMBREL_ROOT}/data/storage/htdocs:/opt/lampp/htdocs:rw
+      - /home/umbrel/umbrel/home/htdocs:/opt/lampp/htdocs:rw
