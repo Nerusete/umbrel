@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: nerusete-xampp
+id: jadelamo-xampp
 name: XAMPP
 tagline: Run a full Apache + MySQL + PHP stack directly on your Umbrel with XAMPP
 icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/640px-XAMPP_logo.svg.png
@@ -18,7 +18,7 @@ description: >-
 
 developer: tomsik68
 website: https://hub.docker.com/r/tomsik68/xampp/
-submitter: Nerusete
+submitter: jadelamo
 submission: https://github.com/PedrooMR/umbrel-community-app-store
 repo: https://github.com/PedrooMR/umbrel-community-app-store
 support: https://github.com/PedrooMR/umbrel-community-app-store/issues
