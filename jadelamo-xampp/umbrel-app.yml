@@ -1,36 +1,39 @@
 manifestVersion: 1
+
 id: jadelamo-xampp
 name: XAMPP
-tagline: Run a full Apache + MySQL + PHP stack directly on your Umbrel with XAMPP
+tagline: Servidor Apache, PHP, MySQL y phpMyAdmin
 icon: https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/640px-XAMPP_logo.svg.png
 category: Developer Tools
-version: "1.0.0"
+version: "1.0.1"
 port: 41062
 
 description: >-
- Run a full Apache, PHP, and MySQL development stack directly on your Umbrel.
+  XAMPP es un entorno de desarrollo que incluye Apache, PHP, MySQL
+  y phpMyAdmin en un único contenedor.
 
-  - 📦 Includes Apache, PHP, and MySQL in one container
-  
-  - 🌐 Ideal for testing and developing PHP-based web applications
-  
-  - 📁 Websites stored in '/umbrel/data/storage/htdocs'
+  Permite desarrollar y probar páginas web y aplicaciones PHP
+  directamente desde tu Umbrel.
 
-developer: tomsik68
-website: https://hub.docker.com/r/tomsik68/xampp/
-submitter: jadelamo
-submission: https://github.com/PedrooMR/umbrel-community-app-store
-repo: https://github.com/PedrooMR/umbrel-community-app-store
-support: https://github.com/PedrooMR/umbrel-community-app-store/issues
+  Los archivos de tus páginas web se almacenan en:
+  /home/umbrel/umbrel/home/htdocs
 
-gallery:
-  - https://i.imgur.com/DrqnJ5J.png
-  - https://i.imgur.com/CG6JHzQ.png
+developer: Apache Friends
+website: https://www.apachefriends.org/
+repo: https://github.com/tomsik68/docker-xampp
+support: https://github.com/tomsik68/docker-xampp/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+gallery: []
 
 releaseNotes: >-
-  Initial release of the XAMPP app for Umbrel.
+  Versión 1.0.1. Instalación simplificada siguiendo el modelo
+  de las aplicaciones JADELAMO que funcionan correctamente.
 
 dependencies: []
+
 path: ""
+
 defaultUsername: ""
 defaultPassword: ""
