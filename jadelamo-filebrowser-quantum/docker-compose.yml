@@ -11,5 +11,5 @@ services:
     restart: on-failure
     volumes:
       - ${UMBREL_ROOT}/data/storage:/storage
-      - ${APP_DATA_DIR}/data/database:/home/filebrowser/database
+      - ${APP_DATA_DIR}/data/database:/home/filebrowser/data
       - ${APP_DATA_DIR}/data/config/config.yaml:/home/filebrowser/config.yaml
