@@ -5,7 +5,7 @@ name: FileBrowser Quantum
 tagline: Gestor de archivos web moderno
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-filebrowser-quantum/icon.svg
 category: utilities
-version: "1.5.6"
+version: "2.1.0-beta"
 port: 10700
 
 description: >-
@@ -22,9 +22,9 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Instalador basado en la configuración Docker Compose recomendada por
-  FileBrowser Quantum. Usa almacenamiento persistente para configuración
-  y base de datos, con la biblioteca de archivos en /srv.
+  Actualizado a FileBrowser Quantum v2.1.0-beta. Utiliza el canal beta actual
+  del proyecto con almacenamiento persistente para configuración, base de
+  datos, caché y archivos.
 
 dependencies: []
 path: ""
