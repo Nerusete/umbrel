@@ -1,16 +1,17 @@
 services:
-  filebrowser-quantum:
-    image: gtstef/filebrowser:1.5.6-stable
+  filebrowser:
     container_name: jadelamo-filebrowser-quantum
+    image: gtstef/filebrowser:1.5.6-stable
     restart: unless-stopped
 
-    ports:
-      - "8085:80"
-
     environment:
-      FILEBROWSER_CONFIG: /home/filebrowser/data/config.yaml
+      FILEBROWSER_CONFIG: "data/config.yaml"
+      FILEBROWSER_ADMIN_PASSWORD: admin
       TZ: Europe/Madrid
 
     volumes:
-      - ./data:/home/filebrowser/data
       - ./files:/srv
+      - ./data:/home/filebrowser/data
+
+    ports:
+      - "10700:80"
