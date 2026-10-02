@@ -1,18 +1,11 @@
 server:
   port: 80
-  database:
-    path: "/home/filebrowser/data/filebrowser.sqlite"
   sources:
     - path: "/storage"
       name: "storage"
       config:
         defaultEnabled: true
         createUserDir: false
-
 auth:
   methods:
-    password:
-      enabled: true
-      adminUsername: admin
-      adminPassword: admin
-      signup: false
+    noauth: true
