@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: tomsik68/xampp:8
+    image: marekr76/xampp:latest
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/htdocs:/opt/lampp/htdocs
