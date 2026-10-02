@@ -1,6 +1,5 @@
 server:
   port: 80
-  database: /home/filebrowser/data/database.db
   cacheDir: /home/filebrowser/data/tmp
   sources:
     - name: Archivos
@@ -8,9 +7,15 @@ server:
       config:
         defaultEnabled: true
 
+  database:
+    path: /home/filebrowser/data/filebrowser.sqlite
+
 auth:
-  adminUsername: admin
+  tokenExpirationHours: 2
   methods:
+    noauth: false
     password:
       enabled: true
+      adminUsername: admin
+      adminPassword: admin
       signup: false
