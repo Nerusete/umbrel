@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: ghcr.io/gtsteffaniak/filebrowser:0.7.8-beta@sha256:1a095d6861ad3c138fd77f67505bd8ab02b42e14fe9ff31a5b52aeaca3d215d5
+    image: ghcr.io/gtsteffaniak/filebrowser:2.1.0-beta
     restart: on-failure
     volumes:
       - ${UMBREL_ROOT}/data/storage:/storage
