@@ -1,0 +1,28 @@
+manifestVersion: 1
+
+id: jadelamo-xampp
+name: XAMPP
+tagline: Apache, MariaDB, PHP y Perl
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-xampp/icon.svg
+category: developer
+version: "1.0.0"
+port: 41062
+
+description: >-
+  XAMPP es un entorno de desarrollo web que incluye Apache, MariaDB,
+  PHP y Perl. Permite alojar y desarrollar páginas web y aplicaciones
+  PHP directamente en tu Umbrel.
+
+developer: Apache Friends
+website: https://www.apachefriends.org/
+repo: https://github.com/tomsik68/xampp
+support: https://github.com/tomsik68/xampp/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO. Utiliza la imagen
+  tomsik68/xampp:8, con almacenamiento persistente para htdocs y MySQL.
+
+dependencies: []
+path: ""
