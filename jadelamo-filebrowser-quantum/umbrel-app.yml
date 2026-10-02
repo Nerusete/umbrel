@@ -5,7 +5,7 @@ name: FileBrowser Quantum
 tagline: Gestor de archivos web moderno
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-filebrowser-quantum/icon.svg
 category: utilities
-version: "2.1.0-beta"
+version: "1.5.6"
 port: 10700
 
 description: >-
@@ -22,9 +22,8 @@ submission: https://github.com/Nerusete/umbrel
 
 gallery: []
 releaseNotes: >-
-  Actualizado a FileBrowser Quantum v2.1.0-beta. Utiliza el canal beta actual
-  del proyecto con almacenamiento persistente para configuración, base de
-  datos, caché y archivos.
+  Versión estable 1.5.6 de FileBrowser Quantum. Se mantiene la base de datos,
+  configuración y archivos en almacenamiento persistente.
 
 dependencies: []
 path: ""
