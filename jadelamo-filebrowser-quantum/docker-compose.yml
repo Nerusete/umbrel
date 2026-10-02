@@ -1,12 +1,11 @@
 services:
   filebrowser:
     container_name: jadelamo-filebrowser-quantum
-    image: gtstef/filebrowser:beta
+    image: gtstef/filebrowser:1.5.6-stable
     restart: unless-stopped
 
     environment:
-      FILEBROWSER_CONFIG: "data/config.yaml"
-      FILEBROWSER_ADMIN_PASSWORD: admin
+      FILEBROWSER_CONFIG: "/home/filebrowser/data/config.yaml"
       TZ: Europe/Madrid
 
     volumes:
