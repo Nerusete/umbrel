@@ -4,7 +4,7 @@ name: FileBrowser Quantum
 tagline: A better filebrowser than Filebrowser
 icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-filebrowser-quantum/icon.svg
 category: files & productivity
-version: "2.1.0-beta"
+version: "0.7.8"
 port: 8633
 description: >-
   Filebrowser Quantum es un gestor de archivos web moderno y avanzado.
@@ -18,10 +18,10 @@ repo: https://github.com/gtsteffaniak/filebrowser
 support: https://github.com/gtsteffaniak/filebrowser/issues
 gallery: []
 releaseNotes: >-
-  Versión beta 2.1.0 adaptada al nuevo sistema de configuración y base de datos
-  SQLite de FileBrowser Quantum v2. Utiliza autenticación por contraseña con
-  usuario admin y contraseña admin y mantiene el almacenamiento de Umbrel.
+  Instalador basado en la misma estructura de FileBrowser Quantum del
+  repositorio dennysubke/dennys-umbrel-app-store, utilizando la imagen
+  ghcr.io/gtsteffaniak/filebrowser:0.7.8-beta.
 dependencies:
 path: ""
-defaultUsername: admin
-defaultPassword: admin
+defaultUsername: ""
+defaultPassword: ""
