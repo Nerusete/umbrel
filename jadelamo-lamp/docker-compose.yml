@@ -7,12 +7,15 @@ services:
       APP_PORT: 80
 
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: webdevops/php-apache:8.3
     restart: unless-stopped
+    environment:
+      TZ: Europe/Madrid
+      PHP_MEMORY_LIMIT: 512M
+      PHP_UPLOAD_MAX_FILESIZE: 256M
+      PHP_POST_MAX_SIZE: 256M
     volumes:
-      - ${APP_DATA_DIR}/data/htdocs:/var/www/html
+      - ${APP_DATA_DIR}/data/htdocs:/app
     depends_on:
       - db
 
