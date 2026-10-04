@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jadelamo-hestiacp_hestia_1
+      APP_PORT: 8083
+      PROXY_AUTH_WHITELIST: "/api/*"
+
+  hestia:
+    image: ghcr.io/ptrinh/hestiacp:latest
+    restart: unless-stopped
+    hostname: hestia.local
+    environment:
+      TZ: Europe/Madrid
+      HESTIA_PASSWORD: jadelamo
+    ports:
+      - "9088:80"
+      - "9448:443"
+    volumes:
+      - ${APP_DATA_DIR}/data/home:/home
+      - ${APP_DATA_DIR}/data/hestia:/usr/local/hestia
+      - ${APP_DATA_DIR}/data/mysql:/var/lib/mysql
+      - ${APP_DATA_DIR}/data/backups:/backup
