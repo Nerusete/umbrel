@@ -1,0 +1,32 @@
+manifestVersion: 1
+
+id: jadelamo-lamp
+name: JADELAMO LAMP
+tagline: Apache, PHP 8.3, MariaDB y phpMyAdmin
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-lamp/icon.svg
+category: developer
+version: "1.0.0"
+port: 41062
+
+description: >-
+  Entorno de desarrollo web completo para Umbrel con Apache, PHP 8.3,
+  MariaDB y phpMyAdmin. Incluye almacenamiento persistente para tus
+  páginas web y bases de datos.
+
+developer: JADELAMO
+website: https://www.php.net/
+repo: https://github.com/Nerusete/umbrel
+support: https://github.com/Nerusete/umbrel/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+releaseNotes: >-
+  Primera versión de JADELAMO LAMP. Sustituye el enfoque monolítico de XAMPP
+  por contenedores independientes basados en imágenes oficiales. Apache y
+  PHP 8.3 sirven los archivos de htdocs, MariaDB almacena las bases de datos
+  y phpMyAdmin permite administrarlas.
+
+dependencies: []
+path: ""
+defaultUsername: root
+defaultPassword: "jadelamo"
