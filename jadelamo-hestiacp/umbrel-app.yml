@@ -1,0 +1,31 @@
+manifestVersion: 1
+
+id: jadelamo-hestiacp
+name: HestiaCP
+tagline: Panel de control para alojamiento web
+icon: https://raw.githubusercontent.com/Nerusete/umbrel/main/jadelamo-hestiacp/icon.svg
+category: developer
+version: "1.0.0"
+port: 41064
+
+description: >-
+  HestiaCP es un panel de control para gestionar sitios web, bases de datos,
+  usuarios, correo, DNS, FTP, copias de seguridad y servicios web desde
+  una interfaz gráfica.
+
+developer: Hestia Control Panel
+website: https://hestiacp.com/
+repo: https://github.com/ptrinh/hestiacp-docker
+support: https://github.com/hestiacp/hestiacp/issues
+submitter: Nerusete
+submission: https://github.com/Nerusete/umbrel
+
+releaseNotes: >-
+  Primera versión para la tienda JADELAMO. Utiliza una imagen HestiaCP
+  Docker no privilegiada y multi-arquitectura, adaptada para convivir con
+  umbrelOS sin ocupar directamente los puertos 80 y 443 del sistema.
+
+dependencies: []
+path: ""
+defaultUsername: admin
+defaultPassword: "Cambiar durante la instalación"
