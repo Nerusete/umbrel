@@ -1,5 +1,4 @@
 manifestVersion: 1
-
 id: jadelamo-xampp
 name: XAMPP
 tagline: Apache, MariaDB, PHP y Perl
@@ -24,5 +23,7 @@ releaseNotes: >-
   Primera versión para la tienda JADELAMO. Utiliza la imagen
   tomsik68/xampp:8, con almacenamiento persistente para htdocs y MySQL.
 
-dependencies: []
+dependencies:
 path: ""
+defaultUsername: ""
+defaultPassword: ""
