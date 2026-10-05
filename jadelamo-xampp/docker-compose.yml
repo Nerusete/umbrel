@@ -10,5 +10,5 @@ services:
     image: marekr76/xampp:latest
     restart: on-failure
     volumes:
-      - ${APP_DATA_DIR}/data/htdocs:/opt/lampp/htdocs
+      - ${UMBREL_ROOT}/data/storage:/opt/lampp/htdocs
       - ${APP_DATA_DIR}/data/mysql:/opt/lampp/var/mysql
