@@ -7,7 +7,7 @@ services:
       APP_PORT: 80
 
   web:
-    image: marekr76/xampp:latest
+    image: tomsik68/xampp:8
     restart: on-failure
     volumes:
       - ${UMBREL_ROOT}/data/storage:/opt/lampp/htdocs
